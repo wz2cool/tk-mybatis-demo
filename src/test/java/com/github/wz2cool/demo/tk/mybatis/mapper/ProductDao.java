@@ -16,6 +16,5 @@ import java.util.List;
  */
 @Mapper
 public interface ProductDao {
-
     List<Product> getProducts();
 }

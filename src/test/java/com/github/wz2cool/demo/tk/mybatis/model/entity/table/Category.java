@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Table(name = "category")
 public class Category {
     @Id
-    @Column(name = "category_id")
+    @Column(name = "category_id", table = "category")
     private Integer categoryID;
     private String categoryName;
     private String description;

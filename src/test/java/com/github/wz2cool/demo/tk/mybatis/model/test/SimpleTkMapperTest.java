@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -45,5 +46,23 @@ public class SimpleTkMapperTest {
         newCategory.setDescription("for test");
         int result = categoryDao.insert(newCategory);
         assertEquals(1, result);
+    }
+
+    @Test
+    public void deleteByExampleTest() {
+        Example example = new Example(Category.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryID", 1);
+        int result = categoryDao.deleteByExample(example);
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void selectByExampleTest() {
+        Example example = new Example(Category.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryID", 1);
+        criteria.orEqualTo("categoryID", 2);
+        categoryDao.selectByExample(example);
     }
 }
