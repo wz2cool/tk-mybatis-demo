@@ -1,7 +1,6 @@
 package com.github.wz2cool.demo.tk.mybatis.model.test;
 
 import com.github.wz2cool.demo.tk.mybatis.TestApplication;
-import com.github.wz2cool.demo.tk.mybatis.mapper.CategoryDao;
 import com.github.wz2cool.demo.tk.mybatis.mapper.ProductDao;
 import com.github.wz2cool.demo.tk.mybatis.model.entity.table.Product;
 import org.junit.Test;

@@ -1,7 +1,5 @@
 package com.github.wz2cool.demo.tk.mybatis.model.entity.table;
 
-import org.springframework.data.annotation.Transient;
-
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
