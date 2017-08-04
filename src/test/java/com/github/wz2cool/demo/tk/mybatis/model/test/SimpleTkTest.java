@@ -2,8 +2,7 @@ package com.github.wz2cool.demo.tk.mybatis.model.test;
 
 import com.github.wz2cool.demo.tk.mybatis.TestApplication;
 import com.github.wz2cool.demo.tk.mybatis.mapper.CategoryDao;
-import com.github.wz2cool.demo.tk.mybatis.mapper.ProductDao;
-import com.github.wz2cool.demo.tk.mybatis.model.entity.table.Product;
+import com.github.wz2cool.demo.tk.mybatis.model.entity.table.Category;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ import static org.junit.Assert.assertEquals;
  * \* Created with IntelliJ IDEA.
  * \* User: Frank
  * \* Date: 8/4/2017
- * \* Time: 2:25 PM
+ * \* Time: 2:32 PM
  * \* To change this template use File | Settings | File Templates.
  * \* Description:
  * \
@@ -27,14 +26,14 @@ import static org.junit.Assert.assertEquals;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @ContextConfiguration(classes = TestApplication.class)
-public class SimpleTest {
+public class SimpleTkTest {
 
     @Autowired
-    private ProductDao productDao;
+    private CategoryDao categoryDao;
 
     @Test
-    public void testSelect() throws Exception {
-        List<Product> productList = productDao.getProducts();
-        assertEquals(true, productList.size() > 0);
+    public void getCategoryTest() {
+        List<Category> categories = categoryDao.selectAll();
+        assertEquals(true, categories.size() > 0);
     }
 }
