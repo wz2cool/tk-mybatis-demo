@@ -1,5 +1,8 @@
 package com.github.wz2cool.demo.tk.mybatis;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * \* Created with IntelliJ IDEA.
  * \* User: Frank
@@ -9,5 +12,9 @@ package com.github.wz2cool.demo.tk.mybatis;
  * \* Description:
  * \
  */
+@SpringBootApplication
 public class TestApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(TestApplication.class, args);
+    }
 }
