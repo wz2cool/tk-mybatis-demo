@@ -1,5 +1,8 @@
 package com.github.wz2cool.demo.tk.mybatis.model.entity.table;
 
+import org.springframework.data.annotation.Transient;
+
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -15,6 +18,7 @@ import javax.persistence.Table;
 @Table(name = "category")
 public class Category {
     @Id
+    @Column(name = "category_id")
     private Integer categoryID;
     private String categoryName;
     private String description;

@@ -12,6 +12,5 @@ import tk.mybatis.mapper.common.Mapper;
  * \* Description:
  * \
  */
-@org.apache.ibatis.annotations.Mapper
 public interface CategoryDao extends Mapper<Category> {
 }
